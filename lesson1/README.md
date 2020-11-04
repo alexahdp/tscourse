@@ -55,7 +55,6 @@
 
 
 ### Примеры
- - [Playground](https://www.typescriptlang.org/play?#code/Q)  
  - [определение и выведение простых типов](./examples/example0.ts)  
  - [обнаружение ошибок на этапе статического анализа кода](./examples/example1.ts)  
  - [Типизация функций](./examples/example4.ts)  
@@ -66,6 +65,7 @@
 
 
 ### Ссылки
+ - [Playground](https://www.typescriptlang.org/play?#code/Q)  
  - https://www.typescriptlang.org/play?#code/Q
  - https://habr.com/ru/post/161205/
  - http://typescript-lang.ru/
