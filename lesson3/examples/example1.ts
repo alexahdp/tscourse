@@ -3,18 +3,25 @@
 // который будет заменён на конкретный, переданный пользователем,
 // при вызове функции или метода, а также при работе с классами.
 
-
-type Filter = <T>(arr: T[], cb: (item: T) => boolean) => T[];
+// описать функцию filter
+type filter = <T>(arr: T[], cb: (item: T) => boolean) => T[];
 
 // ======
 
-// По возможности старайтесь использовать более конкретные типы, чем string
-// еще один пример типизации generic-ов
+// по аналогии с lodash написать функцию pluck, которая преобразует массив объектов
+// извлекая из элементов массива указанное значение
+
 // плохо
 function pluck1(record: any[], key: string): any[] {
   return record.map(r => r[key]);
 }
+
 // хорошо
 function pluck2<T>(record: T[], key: keyof T) {
   return record.map(r => r[key]);
 }
+
+// ====
+
+// generic-и мы используем повсюду:
+// Map<string, string>, Set<string>, Array<string>, ...

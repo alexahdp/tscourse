@@ -3,8 +3,8 @@
 ## Lesson 3
 
 ### Примеры
- - Generic-и
- - keyof
+ - [Generic-и](./examples/example1.ts)  
+ - [keyof](./examples/example2.ts)  
  - Exact type
  - Tuple
  - UtilityTypes: Exclude
@@ -14,14 +14,9 @@
  - ???
 
 
-
-
-на этом занятии мы обсудим, по большей части, проблемы ts как языка
-
-
 sourcemaps
 debug
-TODO: declare
+declare
 strictNullChecks
 noImplicitThis
 strictFunctionTypes

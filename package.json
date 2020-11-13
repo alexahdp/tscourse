@@ -1,0 +1,23 @@
+{
+  "name": "tscourse",
+  "version": "1.0.0",
+  "description": "Данный репозиторий - мой личный набор заметок и набросков тем, о которых следует рассказать в рамках курса занятий по typescript. Многие примеры здесь довольно поверхностные, так что без устного объяснения разобраться в том, что здесь написано и что происходит может быть непросто.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexahdp/tscourse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexahdp/tscourse/issues"
+  },
+  "homepage": "https://github.com/alexahdp/tscourse#readme",
+  "dependencies": {
+    "@types/node": "^14.14.7",
+    "reflect-metadata": "^0.1.13"
+  }
+}
