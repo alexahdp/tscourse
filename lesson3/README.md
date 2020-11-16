@@ -3,20 +3,10 @@
 ## Lesson 3
 
 ### Примеры
- - [Generic-и](./examples/example1.ts)  
- - [keyof](./examples/example2.ts)  
- - Exact type
- - Tuple
- - UtilityTypes: Exclude
- - in
- - UtilityTypes: ReturnType
- - ???
- - ???
-
-
-sourcemaps
-debug
-declare
-strictNullChecks
-noImplicitThis
-strictFunctionTypes
+ - [Tuple](./examples/tuples.ts)  
+ - [Generic-и](./examples/generics.ts)  
+ - [UtilityTypes: ReturnType для типизации redux](./examples/returntype.ts)  
+ - [Generic constraints](./examples/example2.ts)  
+ - [Реализуем свои utility-типы (Pick, Readonly и Partial)](./examples/example5.ts)  
+ - [Interface vs type](./examples/interface_vs_type.ts)  
+ - [Пример типизации нетипизированного кода](./examples/typing_code.ts)  

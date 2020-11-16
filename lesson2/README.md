@@ -22,5 +22,4 @@
  - [Пересечение типов](./examples/example4.ts)  
  - [Interface vs Type](./examples/example5.ts)  
  - [Приведение типов через js и ts - type space и value space](./examples/example6.ts)  
- - Пример типизации нетипизированного кода
 
