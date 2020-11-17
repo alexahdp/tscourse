@@ -5,12 +5,12 @@ ts-node -O '{"experimentalDecorators": true, "target": "es2015"}' lesson4/src/cl
 ## Lesson 4
 
 ### Примеры
- - Class decorator
- - Class decorator factory
- - Property decorator
- - Property decorator factory
- 
- - Parameter decorator
+ - [Class decorator](./examples/class_decorator.ts)  
+ - [Class decorator factory](./examples/class_decorator_factory.ts)  
+ - [Property decorator](./examples/property_decorator.ts)  
+ - [Property decorator factory](./examples/class_decorator_factory.ts)  
+ - [Reflect и Reflect-metadata]
+ - [Parameter decorator](./examples/parameter_decorator.ts)  
 
 Accessor decorator ?
 
