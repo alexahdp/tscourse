@@ -40,15 +40,27 @@ type Partial2<T> = {
   [k in keyof T]?: T[k];
 }
 
-// сигнатуры индексов
-// парсинг csv-файла
-
-interface Vocabulary {
-  [ket: string]: string | number;
-}
-
 type Dict = Record<'name' | 'email', string | number>;
 const user: Dict = {
   name: 'alex',
   email: 'alex@gmail.com',
 };
+
+// а что делать если мы хотим создать тип, который будет
+// не просто наследовать ключи от существующего типа, но и попутно изменять их?
+// с версии 4.3 это стало возможным
+
+// Пример: utility-type Getters принимает на вход тип-интерфейс и создает новый тип,
+// заменяя все свойства на методы get{PropertyName}
+// это достигается путем добавления ключевого слова 'as' и utility-типа Capitalize
+type Getters<T> = {
+  [K in keyof T as `get${Capitalize<string & K>}`]: () => T[K]
+};
+
+interface Person {
+  name: string; 
+  age: number;
+  location: string;
+}
+
+type LazyPerson = Getters<Person>;

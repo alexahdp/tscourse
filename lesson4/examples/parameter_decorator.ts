@@ -1,11 +1,42 @@
-import 'reflect-metadata';
+// Следующая тема, которую мы рассмотрим - parameter-decorators
+// но прежде чем углублять в декораторы параметров, нам необходимо сделать небольшое
+// лирическое отступление и поговорить о двух вещах: Reflect и reflect-metadata
 
-class User {
-  @Reflect.metadata('name', 'value')
-  hello() {
-    console.log('hello');
+// пройтись по ссылкам
+
+// а теперь сформулируем задачу:
+// мы бы хотели иметь возможность вызывать декораторы прямо среди аргументов конструктора
+// чтобы с их помощью внедрять зависимости
+
+// будем стараться делать это в стиле немного похожем на nest
+
+// план
+// создаем класс User
+// создаем класс Greeter и описываем зависимость
+// в DI создаем 
+
+import { Injectable, Fabric, Inject } from './DI';
+
+// создадим класс, который мы будем в будущем инжектить
+@Injectable('User')
+export class User {
+  hello(name: string) {
+    console.log(name);
   }
 }
-const user = new User();
-user.hello()
-console.log(Reflect.getMetadata('name', user, 'hello'));
+
+// создадим класс, в который мы бы хотели инжектить зависимости
+// обратим внимание, что этот класс мы тоже делаем инжектируемым
+@Injectable('Greeter')
+export class Greeter {
+  constructor(@Inject("User") private readonly user: User) {}
+
+  greet(name: string) {
+    this.user.hello(name);
+  }
+}
+
+// собственно, создадим экземпляр класса и проверим, что все работает
+const g = Fabric('Greeter');
+console.log(g)
+g.greet("alex");
