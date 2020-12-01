@@ -22,7 +22,7 @@ ts-node -O '{"experimentalDecorators": true, "target": "es2015"}' lesson4/src/cl
  - [Class decorator factory](./examples/class_decorator_factory.ts)  
  - [Property decorator](./examples/property_decorator.ts)  
  - [Property decorator factory](./examples/class_decorator_factory.ts)  
- - [Reflect и Reflect-metadata]
+ - [Reflect и Reflect-metadata](./examples/reflect.ts)  
  - [Parameter decorator](./examples/parameter_decorator.ts)  
 
 ### Links
@@ -30,3 +30,4 @@ ts-node -O '{"experimentalDecorators": true, "target": "es2015"}' lesson4/src/cl
  - [Reflect proposal](https://rbuckton.github.io/reflect-metadata)  
  - [https://habr.com/ru/post/277021/](https://habr.com/ru/post/277021/)  
  - [core-decorators](https://github.com/jayphelps/core-decorators)  
+ - [Пример работы с reflect-metadata](https://medium.com/jspoint/introduction-to-reflect-metadata-package-and-its-ecmascript-proposal-8798405d7d88)

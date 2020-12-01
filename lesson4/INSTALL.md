@@ -5,7 +5,6 @@ npx tsc --init
 mkdir src
 ```
 
-
 поправить tsconfig.json
  - "include": ["src"]
  - "exclude": ["node_modules]
@@ -14,6 +13,9 @@ mkdir src
  - "moduleResolution": "node",
  - "module": "commonjs"
  - "strictPropertyInitialization": false,
+
+ - "experimentalDecorators": true,
+ - "emitDecoratorMetadata": true,
 
 
 установить:
