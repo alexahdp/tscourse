@@ -4,15 +4,12 @@ import { User } from './user.entity';
 
 @Injectable()
 export class UserService {
-  userList: User[] = [];
-
-  getList(): User[] {
-    return this.userList;
+  async getList(): Promise<User[]> {
+    return await User.find();
   }
 
-  create(user: CreateUserDto): User {
+  async create(user: CreateUserDto): Promise<User> {
     const newUser = new User(user.username, user.email);
-    this.userList.push(newUser);
-    return newUser;
+    return await newUser.save();
   }
 }

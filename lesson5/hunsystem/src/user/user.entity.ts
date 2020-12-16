@@ -1,4 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger";
+import { EntityConflictError } from "src/errors/entity-conflict-error";
+
+const userList: User[] = [];
 
 export class User {
   @ApiProperty()
@@ -17,5 +20,19 @@ export class User {
     if (!this.createdAt) {
       this.createdAt = new Date();
     }
+  }
+
+  static find(): Promise<User[]> {
+    return Promise.resolve(userList);
+  }
+
+  async save() {
+    for (let user of userList) {
+      if (user.email === this.email) {
+        throw new EntityConflictError('Email is alredy used');
+      }
+    }
+    userList.push(this);
+    return Promise.resolve(this);
   }
 }
