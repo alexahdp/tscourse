@@ -1,7 +1,31 @@
+# typescript
+
+## Lesson 5
+
+### План занятия
+ - эволюция разработки на javascript  
+ - фрэймверк nestjs  
+ - создание приложения и CLI-команды  
+ - DI в nestjs  
+ - swagger  
+ - class-validation  
+
+#### Commans
+ - nest new huntsystem
+ 
+
+Тема приложения: HR-система наподобие huntflow
+
+### Links
+ - [History of Node.js on a Timeline](https://blog.risingstack.com/history-of-node-js/)  
+ - []()  
+
+====
+
+
 https://habr.com/ru/post/526998/
 
 тестирование типов
-
 sourcemaps
 debug
 declare
